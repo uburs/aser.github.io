@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Study</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Consent Form -->
+    <div id="consent-form" class="container">
+        <h1>Consent Form for Participation in Research Study</h1>
+        <p><strong>Title of the Study:</strong> ASER: Enhancing Emotional Expression in ASR Captions</p>
+        <p>We invite you to participate in a research study conducted by [Your Institution/Research Group] at [Your University/Organization]. Please read this form carefully and ask any questions you may have before agreeing to participate.</p>
+        
+        <h2>Purpose of the Study:</h2>
+        <p>The purpose of this study is to investigate the importance of emotional expression in automatic speech recognition (ASR) captions used in classrooms, particularly for deaf and hard of hearing (DHH) students. The study aims to develop design guidelines that enhance emotional expression in ASR captions, thereby improving communication and user experience.</p>
+        
+        <h2>Procedures:</h2>
+        <p>If you agree to participate, you will be asked to watch a series of short videos (approximately 3 minutes in total) and complete a survey (approximately 5 minutes). The entire process will take around 10 minutes.</p>
+        
+        <h2>Voluntary Participation:</h2>
+        <p>Your participation is entirely voluntary. You may refuse to participate or withdraw at any time without penalty or loss of benefits to which you are otherwise entitled.</p>
+        
+        <h2>Risks and Benefits:</h2>
+        <p>There are no anticipated risks associated with participating in this study. The benefits of participating include contributing to research that aims to improve communication tools for DHH and non-DHH students.</p>
+        
+        <h2>Confidentiality:</h2>
+        <p>All information collected in this study will be kept confidential. Data will be stored securely and only accessible to the research team. Results will be reported in a way that does not identify individual participants.</p>
+        
+        <h2>Contact Information:</h2>
+        <p>If you have any questions or concerns about this study, please contact [Your Name] at [Your Email] or [Your Phone Number].</p>
+        
+        <h2>Consent Statement:</h2>
+        <p>By clicking "I Agree" below, you acknowledge that you have read and understood the information provided above, and you agree to participate in this study.</p>
+        
+        <button onclick="showVideoPage()">I Agree</button>
+    </div>
+
+    <!-- Video Section -->
+    <div id="video-section" class="container hidden">
+        <h1>Video for QuestionPro Research</h1>
+        <div>
+            <figure>
+                <video width="700" height="800" controls>
+                    <source src="images/Transcription.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </div>
+        <button onclick="completeSurvey()">Complete Survey</button>
+    </div>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        function showVideoPage() {
+            document.getElementById('consent-form').classList.add('hidden');
+            document.getElementById('video-section').classList.remove('hidden');
+        }
+
+        function completeSurvey() {
+            window.location.href = 'https://virginiatech.questionpro.com/user';
+        }
+    </script>
+</body>
+</html>
