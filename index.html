@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Study</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar a i {
+            margin-right: 8px;
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh;
+            text-align: center;
+            min-height: 80vh;
         }
         .hidden {
             display: none;
@@ -25,6 +47,16 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Icons -->
+    <div class="navbar">
+        <a href="#consent-form" onclick="showConsentPage()">
+            <i class="fas fa-file-signature"></i> Consent
+        </a>
+        <a href="#video-section" onclick="showVideoPage()">
+            <i class="fas fa-video"></i> Video
+        </a>
+    </div>
+
     <!-- Consent Form -->
     <div id="consent-form" class="container">
         <h1>Consent Form for Participation in Research Study</h1>
@@ -71,6 +103,11 @@
 
     <!-- JavaScript for Navigation -->
     <script>
+        function showConsentPage() {
+            document.getElementById('consent-form').classList.remove('hidden');
+            document.getElementById('video-section').classList.add('hidden');
+        }
+
         function showVideoPage() {
             document.getElementById('consent-form').classList.add('hidden');
             document.getElementById('video-section').classList.remove('hidden');
