@@ -28,13 +28,14 @@
         }
         .container {
             display: flex;
-            justify-content: center;
-            align-items: left;
             flex-direction: column;
-            text-align: left;
+            align-items: center; /* Center align horizontally */
+            text-align: left; /* Left align text */
             min-height: 80vh;
             margin: 0 30px;
-            text-align: center; /* Center align content */
+        }
+        .container p {
+            margin: 0; /* Reset default margin */
         }
         .hidden {
             display: none;
@@ -44,8 +45,6 @@
         button {
             margin-top: 20px;
             color: tomato;
-            display: block; /* Ensure the button is block-level for auto margin to work */
-            margin: auto; /* Center the button horizontally */
         }
         
         video {
@@ -56,7 +55,7 @@
         h2 {
             text-align: center;
             font-weight: bold;
-            color: #800000
+            color: #800000;
         }
     </style>
     
