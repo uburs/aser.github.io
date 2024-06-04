@@ -15,6 +15,7 @@
             flex-direction: column;
             align-items: center;
             background-color: #f9f9f9;
+            overflow-x: hidden; /* Prevent horizontal overflow */
         }
         .navbar {
             display: flex;
@@ -41,7 +42,9 @@
             align-items: center;
             text-align: left;
             min-height: 80vh;
+            width: 100%; /* Full width to prevent overflow */
             margin: 0 30px;
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .container.active {
             display: flex; /* Show only the active container */
@@ -99,6 +102,7 @@
                 </video>
             </figure>
         </div>
+        <button onclick="showPage(1)">Next</button>
     </div>
     
     <div id="video-section-2" class="container">
@@ -145,7 +149,7 @@
 
     <!-- Picture Page 4 -->
     <div id="picture-section-4" class="container">
-        <h1>Example How We Can Highlight Important Words in Text to Help Convey Emotonal Expressions:</h1>
+        <h1>Example How We Can Highlight Important Words in Text to Help Convey Emotional Expressions:</h1>
         <img src="images/texthighlighting.png" alt="Picture 4" width="600">
         <div class="nav-buttons">
             <button onclick="showPage(4)">Previous</button>
@@ -172,3 +176,4 @@
     </script>
 </body>
 </html>
+
